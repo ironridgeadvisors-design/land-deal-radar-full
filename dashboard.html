@@ -66,6 +66,14 @@
   .legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:2px 0 14px;
     color:var(--mute);font-size:12px}
   .legend .sw{display:inline-block;width:30px;height:11px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .tablescroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
+  @media (max-width:760px){
+    .wrap{padding:12px 10px 60px}
+    .cards{grid-template-columns:repeat(2,1fr)!important}
+    table{min-width:920px}
+    thead th,td{font-size:12px;padding:7px 8px}
+    .controls{gap:8px}
+  }
 </style>
 </head>
 <body>
@@ -96,6 +104,7 @@
     <span><span class="sw" style="background:linear-gradient(90deg,#000,#cd1414)"></span>Removed / probable under contract — black at close, reddening each day toward the seller's 45-day 1031 deadline</span>
   </div>
 
+  <div class="tablescroll">
   <table>
     <thead><tr>
       <th data-k="price">Price<span class="arrow"></span></th>
@@ -113,6 +122,7 @@
     </tr></thead>
     <tbody id="tbody"></tbody>
   </table>
+  </div>
 
   <div class="note">
     <b>Reading this board:</b> rows are the listing (seller-side) broker — the gatekeeper to call.
